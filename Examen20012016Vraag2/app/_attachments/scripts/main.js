@@ -1,6 +1,4 @@
 var DB = "http://127.0.0.1:5984/_utils/document.html?todos/";
-var VIEW = "_design/app/_view/todos_by_id?key=%22";
-
 
 function buildOutput(){
 
