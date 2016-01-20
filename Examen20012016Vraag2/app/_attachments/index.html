@@ -1,29 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My New CouchApp</title>
-    <link rel="stylesheet" href="style/main.css" type="text/css">
-  </head>
+    <title>Todos</title>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+    <link rel='stylesheet' href='style/bootstrap.min.css' type='text/css'>
+   </head>
   <body>
-    <div id="account"></div>
-
-    <h1>Generated CouchApp</h1>
-
-    <div id="profile"></div>
-    <div id="items"></div>
-
-    <div id="sidebar">
-      <p>Edit welcome message.</p>
-      <p>Ideas: You could easily turn this into a photo sharing app, or a grocery list, or a chat room.</p>
-    </div>
+<!--   well= grijze kader -->
+  <div class='well'> 
+        <br/>
+        <div id='output'></div>
+        <div id='edit'></div>
+        <div id='search'>
+            <input type='text' id='id' class='typeahead' placeholder='id' />
+            <button type='button' class='btn btn-success' onClick='searchDoc()'>Zoeken</button>
+        </div>
+  </div>
   </body>
-  <script src="vendor/couchapp/loader.js"></script>
-  <script type="text/javascript" charset="utf-8">
-    $.couch.app(function(app) {
-      $("#account").evently("account", app);
-      $("#profile").evently("profile", app);
-      $.evently.connect("#account","#profile", ["loggedIn","loggedOut"]);
-      $("#items").evently("items", app);
-    });
-  </script>
+    <script src='scripts/jquery-2.1.4.min.js'></script>
+    <script src='scripts/main.js'></script>
 </html>
